@@ -4,72 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halcyon Mapping signs</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: 'Gabarito', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 90%;
-            max-width: 1200px;
-        }
-
-        th {
-            padding: 10px;
-            text-align: center;
-            font-size: 1.2rem;
-            width: 200px;
-        }
-
-        td {
-            padding: 10px;
-            text-align: center;
-            vertical-align: top;
-            width: 200px;
-        }
-
-        img {
-            width: 100%;
-            max-width: 180px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-        }
-
-        .confirmation {
-            background-color: #FFDB78;
-            color: #06131E;
-            font-weight: bold;
-            position: fixed;
-            padding: 5px;
-            top: 200px;
-            visibility: hidden;
-            font-size: 1rem;
-        }
-
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Halcyon Signs</h1>
+    <h1>Halcyon Mapping signs</h1>
+
+    <div id="color-picker">
+        <h3>choose color:</h3>
+        <label class="color-option black">
+            <input type="radio" name="color-group" value="black" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option white">
+            <input type="radio" name="color-group" value="white" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option red">
+            <input type="radio" name="color-group" value="red" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option orange">
+            <input type="radio" name="color-group" value="orange" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option yellow">
+            <input type="radio" name="color-group" value="yellow" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option green">
+            <input type="radio" name="color-group" value="green" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option blue">
+            <input type="radio" name="color-group" value="blue" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option purple">
+            <input type="radio" name="color-group" value="purple" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option pink">
+            <input type="radio" name="color-group" value="pink" onclick="filterSigns()"> 
+        </label>
+        <label class="color-option none">
+            <input type="radio" name="color-group" value="none" onclick="filterSigns()"> 
+        </label>
+    </div>
 
     <table>
         <tr>
@@ -80,7 +52,7 @@
             <th>Names (4x1)</th>
             <th>Flags</th>
         </tr>
-        <tr>
+        <tr class="sign-group">
             <td>
                 <!-- 6x1 signs -->
                 <img src="https://download.dashmap.live/8b23a52e-a6fb-4cc9-a53b-0c46c08768fa/6x1_BlackLogo.jpg" alt="6x1" onclick="copyToClipboard('https://download.dashmap.live/8b23a52e-a6fb-4cc9-a53b-0c46c08768fa/6x1_BlackLogo.jpg')">
@@ -333,18 +305,6 @@
 
     <div id="confirmation" class="confirmation">Sign copied! Paste it in-game!</div>
 
-    <script>
-        function copyToClipboard(url) {
-            navigator.clipboard.writeText(url).then(() => {
-                const confirmation = document.getElementById('confirmation');
-                confirmation.style.visibility = 'visible';
-                setTimeout(() => {
-                    confirmation.style.visibility = 'hidden';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
