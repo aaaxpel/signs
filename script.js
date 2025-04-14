@@ -26,13 +26,13 @@ function filterSigns() {
             img.style.display = "inline-block";
         } else if (selectedGroup === "black" && imgSrc.includes("black")) {
             img.style.display = "inline-block";
-        } else if (selectedGroup === "white" && imgSrc.includes("white")) {
+        } else if (selectedGroup === "white" && (imgSrc.includes("white") || imgSrc.includes("gray"))) {
             img.style.display = "inline-block";
         } else if (selectedGroup === "red" && (imgSrc.includes("red"))) {
             img.style.display = "inline-block";
-        } else if (selectedGroup === "orange" && (imgSrc.includes("orange") || imgSrc.includes("tan"))) {
+        } else if (selectedGroup === "orange" && (imgSrc.includes("orange") || imgSrc.includes("brown") || imgSrc.includes("tan"))) {
             img.style.display = "inline-block";
-        } else if (selectedGroup === "yellow" && (imgSrc.includes("yellow"))) {
+        } else if (selectedGroup === "yellow" && (imgSrc.includes("yellow") || imgSrc.includes("gold"))) {
             img.style.display = "inline-block";
         } else if (selectedGroup === "green" && (imgSrc.includes("green")|| imgSrc.includes("cyan"))) {
             img.style.display = "inline-block";
