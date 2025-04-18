@@ -26,7 +26,7 @@ function filterSigns() {
             img.style.display = "inline-block";
         } else if (selectedGroup === "black" && imgSrc.includes("black")) {
             img.style.display = "inline-block";
-        } else if (selectedGroup === "white" && (imgSrc.includes("white") || imgSrc.includes("gray"))) {
+        } else if (selectedGroup === "white" && (imgSrc.includes("white") || imgSrc.includes("gray") || imgSrc.includes("flaglogo"))) {
             img.style.display = "inline-block";
         } else if (selectedGroup === "red" && (imgSrc.includes("red"))) {
             img.style.display = "inline-block";
